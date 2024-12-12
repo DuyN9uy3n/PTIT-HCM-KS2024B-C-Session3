@@ -1,37 +1,46 @@
 #include <stdio.h>  
-#include <string.h>  
-
-struct SinhVien {  
-    int stt;  
-    int tuoi;  
-    char hoTen[50];  
-    char soDienThoai[11];  
-    char email[50];  
-};  
 
 int main() {  
-    struct SinhVien danhSachSinhVien[] = {  
-        {1, 19, "Duy Nguyen", "12311241", "aad@rikkeacademy.com"},  
-        {2, 21, "Messi", "1234567890", "trttr@rikkeacademy.com"},  
-        {3, 18, "Cuong", "0909488443", "sdfgsdf@rikkeacademy.com"},  
-        {4, 20, "Ronaldo", "0101010101", "abc@gmail.com"},  
-    };  
+    // Student data for four students  
+    int stt1 = 1, tuoi1 = 19;  
+    char hoTen1[] = "Duy Nguyen";  
+    char soDienThoai1[] = "12311241";  
+    char email1[] = "aad@rikkeacademy.com";  
 
-    int soLuongSinhVien = sizeof(danhSachSinhVien) / sizeof(danhSachSinhVien[0]);  
+    int stt2 = 2, tuoi2 = 21;  
+    char hoTen2[] = "Messi";  
+    char soDienThoai2[] = "1234567890";  
+    char email2[] = "trttr@rikkeacademy.com";  
+
+    int stt3 = 3, tuoi3 = 18;  
+    char hoTen3[] = "Cuong";  
+    char soDienThoai3[] = "0909488443";  
+    char email3[] = "sdfgsd@rikkeacademy.com";  
+
+    int stt4 = 4, tuoi4 = 20;  
+    char hoTen4[] = "Ronaldo";  
+    char soDienThoai4[] = "0101010101";  
+    char email4[] = "abc@gmail.com";  
 
     printf("\t\t\t\tDANH SACH SINH VIEN\n");  
     printf("STT  |  Ho ten\t\t|\tTuoi |  So dien thoai   |\t         Email\n");  
-    printf("--------------------------------------------------------------------------------------\n");
-   
+    printf("--------------------------------------------------------------------------------------\n");  
 
-    for (int i = 0; i < soLuongSinhVien; i++) {  
-        printf("%-4d|\t%-16s|\t%-5d|\t%-15s|\t%s\n--------------------------------------------------------------------------------------\n",  
-               danhSachSinhVien[i].stt,  
-               danhSachSinhVien[i].hoTen,  
-               danhSachSinhVien[i].tuoi,  
-               danhSachSinhVien[i].soDienThoai,  
-               danhSachSinhVien[i].email);  
-    }  
+    printf("%-4d|\t%-16s|\t%-5d|\t%-15s|\t%s\n",  
+           stt1, hoTen1, tuoi1, soDienThoai1, email1);  
+    printf("--------------------------------------------------------------------------------------\n");  
+
+    printf("%-4d|\t%-16s|\t%-5d|\t%-15s|\t%s\n",  
+           stt2, hoTen2, tuoi2, soDienThoai2, email2);  
+    printf("--------------------------------------------------------------------------------------\n");  
+
+    printf("%-4d|\t%-16s|\t%-5d|\t%-15s|\t%s\n",  
+           stt3, hoTen3, tuoi3, soDienThoai3, email3);  
+    printf("--------------------------------------------------------------------------------------\n");  
+
+    printf("%-4d|\t%-16s|\t%-5d|\t%-15s|\t%s\n",  
+           stt4, hoTen4, tuoi4, soDienThoai4, email4);  
+    printf("--------------------------------------------------------------------------------------\n");  
 
     return 0;  
 }

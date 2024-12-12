@@ -1,23 +1,24 @@
 #include <stdio.h>
 
-int main() {
-    int num;
-    
-    printf("Nhap 4 chu so nguyen: ");
-    scanf("%d", &num);
+int revNum(int n, int rev) {
+    if (n == 0) {
+        return rev;
+    }
+    return revNum(n / 10, rev * 10 + n % 10);
+}
 
-    if (num < 1000 || num > 9999) {
-        printf("ko hop le.\n");
+int main() {
+    int N;
+    printf("Nhap so nguyen duong N: ");
+    scanf("%d", &N);
+
+    if (N < 0) {
+        printf("N phai la so nguyen duong.\n");
         return 1;
     }
 
-    int reversed = 0;
-    while (num != 0) {
-        int digit = num % 10; 
-        reversed = reversed * 10 + digit; 
-        num /= 10; 
-    }
+    int rev = revNum(N, 0);
+    printf("So dao nguoc: %d\n", rev);
 
-    printf("so dao nghich: %d\n", reversed);
     return 0;
 }
